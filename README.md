@@ -1,6 +1,10 @@
-# arcade-background-scroll
+# Arcade Background Scroll Extension
 
-This is an extension for [MakeCode Arcade](arcade.makecode.com) that adds blocks for scrolling and looping backgrounds.
+This is an extension for [MakeCode Arcade](arcade.makecode.com) that adds blocks for scrolling and looping background images.
+
+#### Metadata (used for search, rendering)
+
+* for PXT/arcade
 
 ## Contributing
 

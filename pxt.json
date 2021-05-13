@@ -1,0 +1,31 @@
+{
+    "name": "arcade-background-scroll",
+    "description": "",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "docs/background-x-offset.md",
+        "docs/background-y-offset.md",
+        "docs/scroll-background-with-camera.md",
+        "docs/scroll-background-with-speed.md",
+        "docs/set-background-offset.md",
+        "docs/set-camera-scrolling-multipliers.md",
+        "icon.png"
+
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.4.41",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj"
+}

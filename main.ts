@@ -1,7 +1,7 @@
 
 //% block=Scroller
 //% color="#ff85a7"
-//% icon="\uf047"
+//% icon="\uf0b2"
 namespace scroller {
     export enum CameraScrollMode {
         //% block="only horizontally"

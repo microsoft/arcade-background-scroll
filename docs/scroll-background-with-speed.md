@@ -10,6 +10,7 @@ scroller.scrollBackgroundWithSpeed(50, 0)
 
 * **vx**: The speed to scroll on the horizontal axis
 * **vy**: The speed to scroll on the vertical axis
+* **layer**: Chooses the parallax layer this operation applies to. Defaults to 0
 
 ## Example #example
 

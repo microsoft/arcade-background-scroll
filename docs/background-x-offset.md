@@ -6,6 +6,10 @@ Returns the current scroll offset for the background on the horizontal axis.
 scroller.getBackgroundXOffset()
 ```
 
+## Parameters
+
+* **layer**: Chooses the parallax layer to get the offset of. Defaults to 0
+
 ## Example #example
 
 In this example, we create a cool background effect by adding a `sin` wave to the current offset x.

@@ -8,7 +8,8 @@ scroller.scrollBackgroundWithCamera(scroller.CameraScrollMode.OnlyHorizontal)
 
 ## Parameters
 
-* **mode**: controls which axes the background image will scroll in
+* **mode**: Controls which axes the background image will scroll in
+* **layer**: Chooses the parallax layer this operation applies to. Defaults to 0
 
 ## Example #example
 

@@ -6,6 +6,10 @@ Returns the current scroll offset for the background on the vertical axis.
 scroller.getBackgroundYOffset()
 ```
 
+## Parameters
+
+* **layer**: Chooses the parallax layer to get the offset of. Defaults to 0
+
 ## Example #example
 
 In this example, we use `sin` and `cos` to make the background move around in a circular pattern

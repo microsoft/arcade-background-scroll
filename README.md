@@ -2,6 +2,8 @@
 
 This is an extension for [MakeCode Arcade](arcade.makecode.com) that adds blocks for scrolling and looping background images.
 
+It can also be used to create a parallax effect by scrolling multiple layers at different speeds.
+
 #### Metadata (used for search, rendering)
 
 * for PXT/arcade

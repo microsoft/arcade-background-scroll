@@ -10,6 +10,7 @@ scroller.setBackgroundScrollOffset(0, 0)
 
 * **xOffset**: The number of pixels to scroll the background image on the horizontal axis
 * **yOffset**: The number of pixels to scroll the background image on the vertical axis
+* **layer**: Chooses the parallax layer this operation applies to. Defaults to 0
 
 ## Example #example
 

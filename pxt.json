@@ -1,6 +1,6 @@
 {
     "name": "arcade-background-scroll",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "",
     "dependencies": {
         "device": "*"
@@ -18,7 +18,6 @@
         "docs/set-layer-image.md",
         "docs/set-layer-z-index.md",
         "icon.png"
-
     ],
     "testFiles": [
         "test.ts"

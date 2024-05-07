@@ -34,22 +34,18 @@ namespace scroller {
 
         constructor() {
             this.updateCameraPosition();
-            this.layers = [new ScrollerState()];
+            this.layers = [new ScrollerState(-1000)];
 
             game.currentScene().eventContext.registerFrameHandler(scene.PRE_RENDER_UPDATE_PRIORITY + 1, () => {
                 this.update();
-            });
-
-            this.renderable = scene.createRenderable(-1000, target => {
-                for (const layer of this.layers) {
-                    layer.draw(target);
-                }
             });
         }
 
         getLayer(layer: number) {
             layer = Math.constrain(layer | 0, 0, 5);
-            while (this.layers.length < layer + 1) this.layers.push(new ScrollerState());
+            while (this.layers.length < layer + 1) {
+                this.layers.push(new ScrollerState(-1000 + this.layers.length))
+            }
             return this.layers[layer];
         }
 
@@ -65,6 +61,11 @@ namespace scroller {
             this.lastCameraX = game.currentScene().camera.offsetX;
             this.lastCameraY = game.currentScene().camera.offsetY;
         }
+
+        setLayerZ(layer: number, z: number) {
+            const scrollState = this.getLayer(layer);
+            scrollState.renderable.z = z;
+        }
     }
 
     let stateStack: LayerState[];
@@ -78,8 +79,9 @@ namespace scroller {
         public cameraXMultiplier: number;
         public cameraYMultiplier: number;
         public image: Image;
+        public renderable: scene.Renderable;
 
-        constructor() {
+        constructor(z: number) {
             this.xOffset = 0;
             this.yOffset = 0;
             this.currentXSpeed = 0;
@@ -88,6 +90,7 @@ namespace scroller {
             this.cameraScrollMode = CameraScrollMode.OnlyHorizontal;
             this.cameraXMultiplier = 1;
             this.cameraYMultiplier = 1;
+            this.renderable = scene.createRenderable(z, target => this.draw(target));
         }
 
         update(lastCameraX: number, lastCameraY: number) {
@@ -291,6 +294,22 @@ namespace scroller {
     //% help=github:arcade-background-scroll/docs/set-layer-image
     export function setLayerImage(layer: number, image: Image) {
         state().getLayer(layer).image = image;
+    }
+
+    /**
+     * Sets the z-index for a layer in the parallax stack. The default
+     * z-indices range from -1000 (layer 0) to -996 (layer 4)
+     */
+    //% block="set z-index for $layer to $z"
+    //% blockId=scroller_setLayerZIndex
+    //% layer.shadow=scroller_backgroundLayer
+    //% z.defl=-1000
+    //% group="Parallax"
+    //% weight=5
+    //% blockGap=8
+    //% help=github:arcade-background-scroll/docs/set-layer-z-index
+    export function setLayerZIndex(layer: number, z: number) {
+        state().setLayerZ(layer, z);
     }
 
     /**

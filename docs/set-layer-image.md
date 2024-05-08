@@ -8,6 +8,8 @@ All of the other blocks in this extension take in a "layer" parameter that can b
 scroller.setLayerImage(scroller._backgroundLayer(scroller.BackgroundLayer.Layer0), img`.`)
 ```
 
+Need more layers? You can drag a number block from the math category over the layer argument to access extra layers (e.g. 6, 7, 8, etc.)
+
 ## Parameters
 
 * **layer**: Chooses the parallax layer to set the image for

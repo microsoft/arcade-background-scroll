@@ -30,11 +30,11 @@ namespace scroller {
         public lastCameraY: number;
         public renderable: scene.Renderable;
 
-        public layers: ScrollerState[];
+        protected layers: ScrollerState[];
 
         constructor() {
             this.updateCameraPosition();
-            this.layers = [new ScrollerState(-1000)];
+            this.layers = [new ScrollerState(BackgroundLayer.Layer0, -1000)];
 
             game.currentScene().eventContext.registerFrameHandler(scene.PRE_RENDER_UPDATE_PRIORITY + 1, () => {
                 this.update();
@@ -42,11 +42,17 @@ namespace scroller {
         }
 
         getLayer(layer: number) {
-            layer = Math.constrain(layer | 0, 0, 5);
-            while (this.layers.length < layer + 1) {
-                this.layers.push(new ScrollerState(-1000 + this.layers.length))
+            layer |= 0;
+
+            for (const layerState of this.layers) {
+                if (layerState.layer === layer) {
+                    return layerState;
+                }
             }
-            return this.layers[layer];
+
+            const newLayer = new ScrollerState(layer, -1000 + layer)
+            this.layers.push(newLayer);
+            return newLayer;
         }
 
         update() {
@@ -81,7 +87,7 @@ namespace scroller {
         public image: Image;
         public renderable: scene.Renderable;
 
-        constructor(z: number) {
+        constructor(public layer: number, z: number) {
             this.xOffset = 0;
             this.yOffset = 0;
             this.currentXSpeed = 0;

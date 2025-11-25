@@ -513,5 +513,8 @@ scroller.scrollBackgroundWithSpeed(-50, 0, scroller._backgroundLayer(scroller.Ba
 scroller.scrollBackgroundWithSpeed(-30, 0, scroller._backgroundLayer(scroller.BackgroundLayer.Layer2))
 scroller.scrollBackgroundWithSpeed(-20, 0, scroller._backgroundLayer(scroller.BackgroundLayer.Layer1))
 scroller.scrollBackgroundWithSpeed(-10, 0, scroller._backgroundLayer(scroller.BackgroundLayer.Layer0))
+```
 
+```package
+arcade-background-scroll=github:microsoft/arcade-background-scroll
 ```

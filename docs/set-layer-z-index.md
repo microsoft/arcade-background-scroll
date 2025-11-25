@@ -295,3 +295,7 @@ controller.moveSprite(mySprite)
 scene.cameraFollowSprite(mySprite)
 scroller.setLayerZIndex(scroller.BackgroundLayer.Layer1, 100)
 ```
+
+```package
+arcade-background-scroll=github:microsoft/arcade-background-scroll
+```

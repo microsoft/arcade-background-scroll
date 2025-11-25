@@ -24,3 +24,6 @@ scroller.setCameraScrollingMultipliers(1, 1)
 ```package
 arcade-background-scroll=github:microsoft/arcade-background-scroll
 ```
+```package
+arcade-background-scroll=github:microsoft/arcade-background-scroll
+```

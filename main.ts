@@ -1,27 +1,34 @@
-
 //% block=Scroller
 //% color="#ff85a7"
 //% icon="\uf0b2"
 namespace scroller {
     export enum CameraScrollMode {
         //% block="only horizontally"
+        //% block.loc.de="nur horizontal"
         OnlyHorizontal,
         //% block="only vertically"
+        //% block.loc.de="nur vertikal"
         OnlyVertical,
         //% block="both directions"
+        //% block.loc.de="beide Richtungen"
         BothDirections
     }
 
     export enum BackgroundLayer {
         //% block="layer 0 (bottom)"
+        //% block.loc.de="Ebene 0 (unten)"
         Layer0,
         //% block="layer 1"
+        //% block.loc.de="Ebene 1"
         Layer1,
         //% block="layer 2"
+        //% block.loc.de="Ebene 2"
         Layer2,
         //% block="layer 3"
+        //% block.loc.de="Ebene 3"
         Layer3,
         //% block="layer 4 (top)"
+        //% block.loc.de="Ebene 4 (oben)"
         Layer4
     }
 
@@ -176,9 +183,11 @@ namespace scroller {
      * @param mode Controls the directions in which the camera may scroll
      */
     //% block="scroll background with camera $mode || for $layer"
+    //% block.loc.de="scrolle Hintergrund mit Kamera $mode || für $layer"
     //% blockId=scroller_scrollBackgroundWithCamera
     //% layer.shadow=scroller_backgroundLayer
     //% group="Scrolling"
+    //% group.loc.de="Scrolling"
     //% weight=40
     //% blockGap=8
     //% help=github:arcade-background-scroll/docs/scroll-background-with-camera
@@ -196,11 +205,12 @@ namespace scroller {
      * @param vy The speed to scroll vertically in pixels per second
      */
     //% block="scroll background with vx $vx vy $vy || for $layer"
-    //% blockId=scroller_scrollBackgroundWithSpeed
+    //% block.loc.de="scrolle Hintergrund mit vx $vx vy $vy || für $layer"
     //% vx.defl=-50
     //% vy.defl=-50
     //% layer.shadow=scroller_backgroundLayer
     //% group="Scrolling"
+    //% group.loc.de="Scrolling"
     //% weight=20
     //% blockGap=8
     //% help=github:arcade-background-scroll/docs/scroll-background-with-speed
@@ -221,11 +231,13 @@ namespace scroller {
      * @param yMultiplier A multiplier to apply to the scrolling in the vertical direction
      */
     //% block="set background camera scroll multipliers to x $xMultiplier y $yMultiplier || for $layer"
+    //% block.loc.de="setze Hintergrund Kamera Scroll-Multiplikatoren auf x $xMultiplier y $yMultiplier || für $layer"
     //% blockId=scroller_setCameraScrollingMultipliers
     //% xMultiplier.defl=1
     //% yMultiplier.defl=1
     //% layer.shadow=scroller_backgroundLayer
     //% group="Scrolling"
+    //% group.loc.de="Scrolling"
     //% weight=0
     //% blockGap=8
     //% help=github:arcade-background-scroll/docs/set-camera-scrolling-multipliers
@@ -244,11 +256,13 @@ namespace scroller {
      * @param y The y offset of the background in pixels
      */
     //% block="set background offset to x $x y $y || for $layer"
+    //% block.loc.de="setze Hintergrund-Versatz auf x $x y $y || für $layer"
     //% blockId=scroller_setBackgroundScrollOffset
     //% x.defl=0
     //% y.defl=0
     //% layer.shadow=scroller_backgroundLayer
     //% group="Position"
+    //% group.loc.de="Position"
     //% weight=40
     //% blockGap=8
     //% help=github:arcade-background-scroll/docs/set-background-offset
@@ -262,9 +276,11 @@ namespace scroller {
      * Returns the current x offset of the scrolled background
      */
     //% block="background offset x || for $layer"
+    //% block.loc.de="Hintergrund-Versatz x || für $layer"
     //% blockId=scroller_getBackgroundXOffset
     //% layer.shadow=scroller_backgroundLayer
     //% group="Position"
+    //% group.loc.de="Position"
     //% weight=20
     //% blockGap=8
     //% help=github:arcade-background-scroll/docs/background-x-offset
@@ -276,9 +292,11 @@ namespace scroller {
      * Returns the current y offset of the scrolled background
      */
     //% block="background offset y || for $layer"
+    //% block.loc.de="Hintergrund-Versatz y || für $layer"
     //% blockId=scroller_getBackgroundYOffset
     //% layer.shadow=scroller_backgroundLayer
     //% group="Position"
+    //% group.loc.de="Position"
     //% weight=0
     //% blockGap=8
     //% help=github:arcade-background-scroll/docs/background-y-offset
@@ -291,10 +309,12 @@ namespace scroller {
      * default (and the furthest from the camera).
      */
     //% block="set image for $layer to $image"
+    //% block.loc.de="setze Bild für $layer auf $image"
     //% blockId=scroller_setLayerImage
     //% image.shadow=background_image_picker
     //% layer.shadow=scroller_backgroundLayer
     //% group="Parallax"
+    //% group.loc.de="Parallax"
     //% weight=10
     //% blockGap=8
     //% help=github:arcade-background-scroll/docs/set-layer-image
@@ -307,10 +327,12 @@ namespace scroller {
      * z-indices range from -1000 (layer 0) to -996 (layer 4)
      */
     //% block="set z-index for $layer to $z"
+    //% block.loc.de="setze z-Index für $layer auf $z"
     //% blockId=scroller_setLayerZIndex
     //% layer.shadow=scroller_backgroundLayer
     //% z.defl=-1000
     //% group="Parallax"
+    //% group.loc.de="Parallax"
     //% weight=5
     //% blockGap=8
     //% help=github:arcade-background-scroll/docs/set-layer-z-index
@@ -325,6 +347,7 @@ namespace scroller {
     //% block="$layer"
     //% blockId=scroller_backgroundLayer
     //% group="Parallax"
+    //% group.loc.de="Parallax"
     //% weight=0
     //% blockGap=8
     export function _backgroundLayer(layer: BackgroundLayer): number {

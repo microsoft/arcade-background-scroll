@@ -1,6 +1,6 @@
 {
     "name": "arcade-background-scroll",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "",
     "dependencies": {
         "device": "*"
